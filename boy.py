@@ -6,6 +6,7 @@ from sdl2 import (SDL_KEYDOWN, SDL_KEYUP, SDLK_LEFT, SDLK_RIGHT,
 from transitions import Machine
 
 import game_world
+import items
 from ball import Ball
 
 
@@ -18,6 +19,7 @@ class Boy:
         self.dir = 0
         self.face_dir = 1
         self.pressed_keys = set()
+        self.selected_item = items.SMALL
 
         self.machine = Machine(
             model=self,
