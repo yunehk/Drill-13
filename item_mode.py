@@ -24,6 +24,9 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_1:
             choose_item(items.SMALL)
             return
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_2:
+            choose_item(items.LARGE)
+            return
 
 
 def choose_item(item):
