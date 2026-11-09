@@ -21,6 +21,14 @@ def handle_events():
         if event.type == SDL_QUIT:
             game_framework.quit()
             return
+        elif event.type == SDL_KEYDOWN and event.key == SDLK_1:
+            choose_item(items.SMALL)
+            return
+
+
+def choose_item(item):
+    play_mode.boy.selected_item = item
+    game_framework.pop_mode()
 
 
 def update():
