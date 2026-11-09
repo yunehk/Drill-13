@@ -30,6 +30,10 @@ def handle_events():
         elif event.type == SDL_KEYDOWN and event.key == SDLK_0:
             choose_item(items.NONE)
             return
+        elif event.type == SDL_KEYDOWN and event.key in (SDLK_ESCAPE, SDLK_i):
+            if not getattr(event, 'repeat', 0):
+                game_framework.pop_mode()
+                return
 
 
 def choose_item(item):
