@@ -34,6 +34,8 @@ def handle_events():
             if not getattr(event, 'repeat', 0):
                 game_framework.pop_mode()
                 return
+        elif event.type == SDL_KEYUP:
+            play_mode.boy.handle_event(event)
 
 
 def choose_item(item):
