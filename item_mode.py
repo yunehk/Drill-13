@@ -28,4 +28,7 @@ def update():
 
 
 def render():
-    play_mode.render()
+    clear_canvas()
+    play_mode.game_world.render()
+    image.draw(get_canvas_width() // 2, get_canvas_height() // 2)
+    update_canvas()
